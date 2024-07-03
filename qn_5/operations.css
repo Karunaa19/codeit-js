@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+.head{
+    background-color:rgb(228, 229, 222);
+    color:brown;
+    text-align:center;
+
+}
+#para {
+    color:rgb(93, 63, 18);
+    text-align:center;
+}

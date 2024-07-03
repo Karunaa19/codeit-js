@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check If Integer</title>
+</head>
+<body>
+    <h1>Check If Integer</h1>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="validateNumber()">Check</button>
+    <p id="output"></p>
+
+    <script>
+        function checkIfInteger(number) {
+            if (!Number.isInteger(number)) {
+                throw new Error('The provided value is not an integer');
+            } else {
+                console.log('The provided value is an integer');
+            }
+        }
+
+        function validateNumber() {
+            const input = document.getElementById('numberInput').value;
+            const output = document.getElementById('output');
+            try {
+                const number = parseFloat(input);
+                checkIfInteger(number);
+                output.textContent = 'The provided value is an integer';
+            } catch (error) {
+                output.textContent = error.message;
+            }
+        }
+    </script>
+</body>
+</html>
